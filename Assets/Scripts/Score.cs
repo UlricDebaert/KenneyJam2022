@@ -6,8 +6,10 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TMP_Text scoreUI;
+    public TMP_Text highScoreUI;
 
     float score;
+    float highscore;
 
     private void Start()
     {
@@ -25,5 +27,11 @@ public class Score : MonoBehaviour
     void UpdateUI()
     {
         scoreUI.text = "Height : " + score.ToString();
+
+        if(score>=highscore)
+        {
+            highScoreUI.text = "Highscore : " + score.ToString();
+            highscore = score;
+        }
     }
 }

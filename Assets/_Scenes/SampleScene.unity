@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe48305eaf62f044cbf2019fc4ce860e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillingSpeed: 1
+  fillingSpeed: 0.2
   startDelay: 5
 --- !u!4 &92431513
 Transform:
@@ -951,8 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af31e2591618ed148acc3b992dcc4a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorA: {r: 1, g: 0.46851012, b: 0, a: 1}
-  ColorB: {r: 0.99607843, g: 0.7114696, b: 0, a: 1}
+  ColorA: {r: 1, g: 0.46851012, b: 0, a: 0.78431374}
+  ColorB: {r: 0.99607843, g: 0.7114696, b: 0, a: 0.7058824}
   colorSpeed: 1
 --- !u!1 &580716154
 GameObject:
@@ -1211,7 +1211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050359628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.033, y: -0.366, z: 0}
+  m_LocalPosition: {x: -0.033, y: -0.1, z: 0}
   m_LocalScale: {x: 0.52294636, y: 0.11803459, z: 1}
   m_Children: []
   m_Father: {fileID: 292323905}

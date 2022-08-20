@@ -144,3 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015a89a2e4c0a654c8d1a5002fda5d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeDistPercentBonus: 100

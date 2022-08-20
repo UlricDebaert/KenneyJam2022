@@ -27,8 +27,15 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < deckPos.Length; i++)
         {
             int cardID = Random.Range(0, cardPrefabs.Length);
-            GameObject card = Instantiate(cardPrefabs[cardID], deckPos[i].position, Quaternion.identity);
+            GameObject card = Instantiate(cardPrefabs[cardID], deckPos[i].position, Quaternion.identity, deckPos[i]);
             card.GetComponent<Card>().spawnID = i;
         }
+    }
+
+    public void DrawNewCard(int Index)
+    {
+        int cardID = Random.Range(0, cardPrefabs.Length);
+        GameObject card = Instantiate(cardPrefabs[cardID], deckPos[Index].position, Quaternion.identity, deckPos[cardID]);
+        card.GetComponent<Card>().spawnID = Index;
     }
 }

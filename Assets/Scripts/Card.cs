@@ -21,7 +21,7 @@ public class Card : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    Debug.Log(hit.collider.gameObject.name);
+                    //Debug.Log(hit.collider.gameObject.name);
                     InstantiatePreview();
                     Destroy(gameObject);
                 }

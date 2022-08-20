@@ -20,6 +20,7 @@ public class Preview : MonoBehaviour
     //Card Data
     [HideInInspector] public GameObject objectToSpawn;
     public GameObject cardPrefab;
+    [HideInInspector] public float price;
     [HideInInspector] public int cardID;
 
 
@@ -35,18 +36,38 @@ public class Preview : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(mousePos.x, mousePos.y, transform.position.z);
 
-        if (Input.GetKeyUp(KeyCode.Mouse0) && (!canBuild || obstacle))
-        {
-            GameObject card = Instantiate(cardPrefab, CardManager.instance.deckPos[cardID].position, Quaternion.identity, CardManager.instance.deckPos[cardID]);
-            card.GetComponent<Card>().spawnID = cardID;
-            Destroy(gameObject);
-        }
+        //if (Input.GetKeyUp(KeyCode.Mouse0) && (!canBuild || obstacle))
+        //{
+        //    GameObject card = Instantiate(cardPrefab, CardManager.instance.deckPos[cardID].position, Quaternion.identity, CardManager.instance.deckPos[cardID]);
+        //    card.GetComponent<Card>().spawnID = cardID;
+        //    Destroy(gameObject);
+        //}
 
-        if (Input.GetKeyUp(KeyCode.Mouse0) && canBuild && !obstacle)
+        //if (Input.GetKeyUp(KeyCode.Mouse0) && canBuild && !obstacle)
+        //{
+        //    Instantiate(objectToSpawn, transform.position, transform.rotation);
+        //    CardManager.instance.DrawNewCard(cardID);
+        //    Destroy(gameObject);
+        //}
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            Instantiate(objectToSpawn, transform.position, transform.rotation);
-            CardManager.instance.DrawNewCard(cardID);
-            Destroy(gameObject);
+            if (!canBuild || obstacle)
+            {
+                Undo();
+            }
+
+            if (canBuild && !obstacle)
+            {
+                if (ManaGer.instance.SpendMana(price))
+                {
+                    Build();
+                }
+                else
+                {
+                    Undo();
+                }
+            }
         }
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -54,8 +75,21 @@ public class Preview : MonoBehaviour
         transform.Rotate(0, 0, horizontalInput * rotationSpeed * Time.deltaTime * -10);
 
         if (canBuild) sprite.color = buildEnableColor;
-        if (!canBuild || obstacle) sprite.color = buildDisableColor;
+        if (!canBuild || obstacle || price >= ManaGer.instance.manaCounter) sprite.color = buildDisableColor;
+    }
 
+    void Build()
+    {
+        Instantiate(objectToSpawn, transform.position, transform.rotation);
+        CardManager.instance.DrawNewCard(cardID);
+        Destroy(gameObject);
+    }
+
+    void Undo()
+    {
+        GameObject card = Instantiate(cardPrefab, CardManager.instance.deckPos[cardID].position, Quaternion.identity, CardManager.instance.deckPos[cardID]);
+        card.GetComponent<Card>().spawnID = cardID;
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

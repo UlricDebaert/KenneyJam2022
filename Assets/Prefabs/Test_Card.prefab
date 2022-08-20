@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5649171510995904034}
   - component: {fileID: 5649171510995904033}
   - component: {fileID: 4060512710314151911}
+  - component: {fileID: 1782907943615348009}
   - component: {fileID: 5253470287148039660}
   m_Layer: 0
   m_Name: Test_Card
@@ -97,9 +98,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewGO: {fileID: 2907981851478084734, guid: 8e8c173ca7d12404bbea53cad34d624d, type: 3}
-  ownCardPrefab: {fileID: 5649171510995904032}
   objectToSpawn: {fileID: 7630115035426749821, guid: 793ae8360e697144e906803c5800494f, type: 3}
   spawnID: 0
+--- !u!114 &1782907943615348009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649171510995904032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b69a900266859141aca85711f1a4fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 0
+  gravity: 0
+  price: 2
+  phyMat: {fileID: 0}
 --- !u!61 &5253470287148039660
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -9,6 +9,15 @@ public class ManaGer : MonoBehaviour
     public float manaRegenPerSecond;
     public float manaCounter;
 
+    public static ManaGer instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this) Destroy(gameObject);
+
+        instance = this;
+    }
+
     private void Start()
     {
         manaCounter = startingMana;
@@ -20,15 +29,17 @@ public class ManaGer : MonoBehaviour
             manaCounter += manaRegenPerSecond * Time.deltaTime;
     }
 
-    public void SpendMana(float manaToSpend)
+    public bool SpendMana(float manaToSpend)
     {
         if (manaToSpend <= manaCounter)
         {
             manaCounter -= manaToSpend;
+            return true;
         }
         else
         {
             Debug.Log("Not Enough Mana!");
+            return false;
         }
     }
 }

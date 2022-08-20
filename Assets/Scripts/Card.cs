@@ -7,7 +7,17 @@ public class Card : MonoBehaviour
     public GameObject previewGO;
     public GameObject objectToSpawn;
 
+    ObjectStatManager OSM;
+
+    float price;
+
     public int spawnID;
+
+    private void Start()
+    {
+        OSM = GetComponent<ObjectStatManager>();
+        price = OSM.price;
+    }
 
     void Update()
     {
@@ -33,5 +43,6 @@ public class Card : MonoBehaviour
     {
         GameObject preview = Instantiate(previewGO, transform.position, Quaternion.identity);
         preview.GetComponent<Preview>().cardID = spawnID;
+        preview.GetComponent<Preview>().price = price;
     }
 }

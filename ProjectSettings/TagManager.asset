@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BuildArea
   - Obstacle
+  - TowerPiece
   layers:
   - Default
   - TransparentFX

@@ -61,7 +61,7 @@ public class Preview : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("Obstacle") || collision.CompareTag("TowerPiece"))
         {
             obstacle = true;
         }
@@ -73,7 +73,7 @@ public class Preview : MonoBehaviour
         {
             canBuild = false;
         }
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("Obstacle") || collision.CompareTag("TowerPiece"))
         {
             obstacle = false;
         }

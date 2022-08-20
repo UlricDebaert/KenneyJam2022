@@ -20,7 +20,11 @@ public class Preview : MonoBehaviour
     //Card Data
     [HideInInspector] public GameObject objectToSpawn;
     public GameObject cardPrefab;
+    [HideInInspector] public float weight;
+    [HideInInspector] public float gravity;
     [HideInInspector] public float price;
+    [HideInInspector] public PhysicsMaterial2D phyMat;
+
     [HideInInspector] public int cardID;
 
 
@@ -80,7 +84,10 @@ public class Preview : MonoBehaviour
 
     void Build()
     {
-        Instantiate(objectToSpawn, transform.position, transform.rotation);
+        GameObject objectInstantiated = Instantiate(objectToSpawn, transform.position, transform.rotation);
+        objectInstantiated.GetComponent<Rigidbody2D>().mass = weight;
+        objectInstantiated.GetComponent<Rigidbody2D>().gravityScale = gravity;
+        objectInstantiated.GetComponent<Rigidbody2D>().sharedMaterial = phyMat;
         CardManager.instance.DrawNewCard(cardID);
         Destroy(gameObject);
     }

@@ -9,14 +9,20 @@ public class Card : MonoBehaviour
 
     ObjectStatManager OSM;
 
+    float weight;
+    float gravity;
     float price;
+    PhysicsMaterial2D phyMat;
 
     public int spawnID;
 
     private void Start()
     {
         OSM = GetComponent<ObjectStatManager>();
+        weight = OSM.weight;
+        gravity = OSM.gravity;
         price = OSM.price;
+        phyMat = OSM.phyMat;
     }
 
     void Update()
@@ -43,6 +49,9 @@ public class Card : MonoBehaviour
     {
         GameObject preview = Instantiate(previewGO, transform.position, Quaternion.identity);
         preview.GetComponent<Preview>().cardID = spawnID;
+        preview.GetComponent<Preview>().weight = weight;
+        preview.GetComponent<Preview>().gravity = gravity;
         preview.GetComponent<Preview>().price = price;
+        preview.GetComponent<Preview>().phyMat = phyMat;
     }
 }

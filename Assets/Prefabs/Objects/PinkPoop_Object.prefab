@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1843368118956679720}
   - component: {fileID: 8391940326813544233}
   m_Layer: 0
-  m_Name: PinkPoop_Card
+  m_Name: PinkPoop_Object
   m_TagString: TowerPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

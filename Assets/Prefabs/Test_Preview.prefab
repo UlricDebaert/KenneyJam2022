@@ -127,7 +127,8 @@ MonoBehaviour:
   buildEnableColor: {r: 0.20425534, g: 1, b: 0, a: 0.7058824}
   buildDisableColor: {r: 1, g: 0, b: 0, a: 0.7058824}
   objectToSpawn: {fileID: 7630115035426749821, guid: 793ae8360e697144e906803c5800494f, type: 3}
-  cardPrefab: {fileID: 5649171510995904032, guid: c9f838985fdcfa045b0358ad85478424, type: 3}
+  cardPrefab: {fileID: 5649171510995904032, guid: 2b739dacd83ec984790f8d2be462634f, type: 3}
+  price: 0
   cardID: 0
 --- !u!50 &8017687941898241491
 Rigidbody2D:

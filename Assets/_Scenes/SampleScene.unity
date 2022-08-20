@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ee9164b25378745a15e7d0fba151d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMana: 100
+  startingMana: 5
   maxMana: 5
   manaRegenPerSecond: 1
   manaCounter: 0

@@ -7,7 +7,7 @@ using TMPro;
 public class CardUI : MonoBehaviour
 {
     public TMP_Text cardName;
-    public SpriteRenderer cardImage;
+    public Image cardImage;
     public GameObject[] manaList;
     ObjectStatManager objStatManager;
 

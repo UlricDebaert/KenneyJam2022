@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7630115035426749819}
   - component: {fileID: 7630115035426749820}
   - component: {fileID: 7630115035426749818}
-  - component: {fileID: 1843368118956679720}
   - component: {fileID: 8391940326813544233}
+  - component: {fileID: -1057728954865131436}
   m_Layer: 0
-  m_Name: Fence_Object
+  m_Name: SUV_Preview
   m_TagString: TowerPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 28a78ac1841326048b4f7fa73eff8a0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 044308bd0a4b43d44b34866774be65ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,19 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1843368118956679720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7630115035426749821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 015a89a2e4c0a654c8d1a5002fda5d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeDistPercentBonus: 100
 --- !u!60 &8391940326813544233
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +123,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.04, y: 0.77}
+    oldSize: {x: 0.3, y: 0.15}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,31 +131,35 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4946983, y: -0.2524698}
-      - {x: 0.5225302, y: 0.23957765}
-      - {x: 0.43228883, y: 0.38246983}
-      - {x: 0.39999998, y: 0.385}
-      - {x: 0.2855903, y: 0.2564699}
-      - {x: 0.28742564, y: 0.145}
-      - {x: -0.28900224, y: 0.11817594}
-      - {x: -0.29241425, y: 0.26329398}
-      - {x: -0.39999998, y: 0.385}
-      - {x: -0.4397639, y: 0.385}
-      - {x: -0.523412, y: 0.2474677}
-      - {x: -0.5088445, y: -0.04685924}
-      - {x: -0.4739707, y: -0.385}
-      - {x: -0.29999998, y: -0.385}
-      - {x: -0.29828745, y: -0.29268914}
-      - {x: 0.309044, y: -0.3180674}
-      - {x: 0.31912112, y: -0.38470438}
-      - {x: 0.48999998, y: -0.385}
-    - - {x: 0.04, y: -0.105}
-      - {x: -0.11, y: -0.095}
-      - {x: -0.26999998, y: -0.085}
-      - {x: -0.29, y: -0.074999996}
-      - {x: -0.099999994, y: -0.074999996}
-      - {x: -0.089999996, y: -0.065}
-      - {x: 0.28, y: -0.055}
-      - {x: 0.28, y: -0.065}
-      - {x: 0.29, y: -0.125}
-      - {x: 0.19999999, y: -0.114999995}
+    - - {x: -0.046096265, y: 0.076574326}
+      - {x: -0.05880384, y: 0.058189325}
+      - {x: -0.08238834, y: 0.026845425}
+      - {x: -0.14923592, y: 0.027558036}
+      - {x: -0.14999999, y: -0.074999996}
+      - {x: 0.14999999, y: -0.074999996}
+      - {x: 0.14923586, y: 0.02672749}
+      - {x: 0.09323943, y: 0.027290508}
+      - {x: 0.09071326, y: 0.05348038}
+      - {x: 0.07810618, y: 0.07576411}
+--- !u!114 &-1057728954865131436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630115035426749821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c225ae86af6414da2af6aa22004d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  buildEnableColor: {r: 0.20392157, g: 1, b: 0, a: 0.7058824}
+  buildDisableColor: {r: 1, g: 0, b: 0, a: 0.7058824}
+  objectToSpawn: {fileID: 0}
+  cardPrefab: {fileID: 5649171510995904032, guid: b1ed17e4bb5701d4eb1e54655f647fcf, type: 3}
+  weight: 0
+  gravity: 0
+  price: 0
+  phyMat: {fileID: 0}
+  cardID: 0

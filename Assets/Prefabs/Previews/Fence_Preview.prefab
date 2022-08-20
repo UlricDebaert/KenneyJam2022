@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7630115035426749819}
   - component: {fileID: 7630115035426749820}
   - component: {fileID: 7630115035426749818}
-  - component: {fileID: 1843368118956679720}
   - component: {fileID: 8391940326813544233}
+  - component: {fileID: 5373522437389277347}
   m_Layer: 0
-  m_Name: Fence_Object
+  m_Name: Fence_Preview
   m_TagString: TowerPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,19 +106,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1843368118956679720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7630115035426749821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 015a89a2e4c0a654c8d1a5002fda5d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeDistPercentBonus: 100
 --- !u!60 &8391940326813544233
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +159,25 @@ PolygonCollider2D:
       - {x: 0.28, y: -0.065}
       - {x: 0.29, y: -0.125}
       - {x: 0.19999999, y: -0.114999995}
+--- !u!114 &5373522437389277347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630115035426749821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c225ae86af6414da2af6aa22004d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  buildEnableColor: {r: 0.20392157, g: 1, b: 0, a: 0.7058824}
+  buildDisableColor: {r: 1, g: 0, b: 0, a: 0.7058824}
+  objectToSpawn: {fileID: 0}
+  cardPrefab: {fileID: 5649171510995904032, guid: e8aa60e728a576242b2579d4d13233fe, type: 3}
+  weight: 0
+  gravity: 0
+  price: 0
+  phyMat: {fileID: 0}
+  cardID: 0

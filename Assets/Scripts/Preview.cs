@@ -84,6 +84,7 @@ public class Preview : MonoBehaviour
 
     void Build()
     {
+        print("Build");
         GameObject objectInstantiated = Instantiate(objectToSpawn, transform.position, transform.rotation);
         objectInstantiated.GetComponent<Rigidbody2D>().mass = weight;
         objectInstantiated.GetComponent<Rigidbody2D>().gravityScale = gravity;
@@ -94,6 +95,7 @@ public class Preview : MonoBehaviour
 
     void Undo()
     {
+        print("Undo");
         GameObject card = Instantiate(cardPrefab, CardManager.instance.deckPos[cardID].position, Quaternion.identity, CardManager.instance.deckPos[cardID]);
         card.GetComponent<Card>().spawnID = cardID;
         Destroy(gameObject);

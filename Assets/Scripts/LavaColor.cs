@@ -24,6 +24,5 @@ public class LavaColor : MonoBehaviour
         timer += Time.deltaTime * colorSpeed;
 
         sr.color = Color.Lerp(ColorA, ColorB, Mathf.Sin(timer) / 2 + 0.5f);
-        print(Mathf.Sin(timer) / 2 + 0.5f);
     }
 }

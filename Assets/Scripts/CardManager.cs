@@ -35,7 +35,7 @@ public class CardManager : MonoBehaviour
     public void DrawNewCard(int Index)
     {
         int cardID = Random.Range(0, cardPrefabs.Length);
-        GameObject card = Instantiate(cardPrefabs[cardID], deckPos[Index].position, Quaternion.identity, deckPos[cardID]);
+        GameObject card = Instantiate(cardPrefabs[cardID], deckPos[Index].position, Quaternion.identity, deckPos[Index]);
         card.GetComponent<Card>().spawnID = Index;
     }
 }

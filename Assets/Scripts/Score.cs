@@ -24,6 +24,6 @@ public class Score : MonoBehaviour
 
     void UpdateUI()
     {
-        scoreUI.text = "Score : " + score.ToString();
+        scoreUI.text = "Height : " + score.ToString();
     }
 }

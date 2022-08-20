@@ -48,6 +48,7 @@ public class Card : MonoBehaviour
     void InstantiatePreview()
     {
         GameObject preview = Instantiate(previewGO, transform.position, Quaternion.identity);
+        preview.GetComponent<Preview>().objectToSpawn = objectToSpawn;
         preview.GetComponent<Preview>().cardID = spawnID;
         preview.GetComponent<Preview>().weight = weight;
         preview.GetComponent<Preview>().gravity = gravity;

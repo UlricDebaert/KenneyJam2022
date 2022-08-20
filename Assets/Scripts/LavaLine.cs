@@ -8,6 +8,15 @@ public class LavaLine : MonoBehaviour
 
     public float startDelay;
 
+    public static LavaLine instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this) Destroy(gameObject);
+
+        instance = this;
+    }
+
     private void Update()
     {
         if (startDelay > 0)

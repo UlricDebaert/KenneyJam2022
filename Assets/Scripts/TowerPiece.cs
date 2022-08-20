@@ -32,6 +32,19 @@ public class TowerPiece : MonoBehaviour, IComparable<TowerPiece>
                 rb.isKinematic = false;
             }
         }
+
+        if (!touchTower)
+        {
+            if(transform.position.y < LavaLine.instance.gameObject.transform.position.y)
+            {
+                Explode();
+            }
+        }
+    }
+
+    void Explode()
+    {
+        Destroy(gameObject);
     }
 
     public int CompareTo(TowerPiece other)

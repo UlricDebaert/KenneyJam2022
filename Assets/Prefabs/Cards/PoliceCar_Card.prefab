@@ -786,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b43f7a9ebe1e4244837c8ded042aadf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previewGO: {fileID: 2907981851478084734, guid: 8e8c173ca7d12404bbea53cad34d624d, type: 3}
-  objectToSpawn: {fileID: 7630115035426749821, guid: 793ae8360e697144e906803c5800494f, type: 3}
+  previewGO: {fileID: 7630115035426749821, guid: 8fb97c8a39569a9498d0f4c2a2ec17f7, type: 3}
+  objectToSpawn: {fileID: 7630115035426749821, guid: 6727fd80f3f7bf34e9da9139503770cb, type: 3}
   spawnID: 0
 --- !u!114 &8968382509491890119
 MonoBehaviour:

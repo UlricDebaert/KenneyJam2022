@@ -25,11 +25,13 @@ public class TowerPiece : MonoBehaviour, IComparable<TowerPiece>
             if (transform.position.y < cam.transform.position.y - cam.orthographicSize - cam.orthographicSize * freezeDistPercentBonus / 100)
             {
                 rb.isKinematic = true;
+                rb.freezeRotation = true;
                 rb.velocity = Vector3.zero;
             }
             else
             {
                 rb.isKinematic = false;
+                rb.freezeRotation = false;
             }
         }
 
@@ -37,7 +39,7 @@ public class TowerPiece : MonoBehaviour, IComparable<TowerPiece>
         {
             if(transform.position.y < LavaLine.instance.gameObject.transform.position.y && !rb.isKinematic)
             {
-                Explode();
+                //Explode();
             }
         }
     }

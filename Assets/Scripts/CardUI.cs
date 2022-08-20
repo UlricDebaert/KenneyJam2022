@@ -18,6 +18,7 @@ public class CardUI : MonoBehaviour
         cardName.text = objStatManager.cardName;
 
         cardImage.sprite = objStatManager.cardImage;
+        cardImage.preserveAspect = true;
 
         for(int i = 0; i < objStatManager.price; i++)
         {

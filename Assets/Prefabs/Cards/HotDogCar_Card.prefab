@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 2916876941885537117}
   - component: {fileID: 5253470287148039660}
   m_Layer: 0
-  m_Name: PoliceCar_Card
+  m_Name: HotDogCar_Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,8 +801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b69a900266859141aca85711f1a4fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Police Car
-  cardImage: {fileID: 21300000, guid: 127fc115b2a55d84ab3f90ac6961ee50, type: 3}
+  cardName: Hot Dog Car
+  cardImage: {fileID: 21300000, guid: 7155aa4601a25114e80e30693f4e1e08, type: 3}
   weight: 0
   gravity: 0
   price: 0

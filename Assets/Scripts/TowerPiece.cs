@@ -35,7 +35,7 @@ public class TowerPiece : MonoBehaviour, IComparable<TowerPiece>
 
         if (!touchTower)
         {
-            if(transform.position.y < LavaLine.instance.gameObject.transform.position.y)
+            if(transform.position.y < LavaLine.instance.gameObject.transform.position.y && !rb.isKinematic)
             {
                 Explode();
             }

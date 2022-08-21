@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Rocket
-  cardImage: {fileID: 21300000, guid: 5b87db9e4c1cc394aba2f1868e48e8ae, type: 3}
+  cardImage: {fileID: 21300000, guid: b5e56df4a1b3a0b4d85775347e591181, type: 3}
   weight: 1.55
   gravity: 1
   price: 5

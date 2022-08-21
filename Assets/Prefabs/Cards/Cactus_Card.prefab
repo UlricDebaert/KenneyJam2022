@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Cactus
-  cardImage: {fileID: 21300000, guid: 6a593f3f129362347ba58408a5a3106b, type: 3}
+  cardImage: {fileID: 21300000, guid: 6779ca3adbe89f24daa946fa1c131512, type: 3}
   weight: 0.75
   gravity: 1
   price: 2

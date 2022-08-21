@@ -3083,6 +3083,7 @@ MonoBehaviour:
   - {fileID: 5649171510995904032, guid: 5dfb8ee47134b054eaceb5ba9da6680e, type: 3}
   - {fileID: 5649171510995904032, guid: b1ed17e4bb5701d4eb1e54655f647fcf, type: 3}
   - {fileID: 5649171510995904032, guid: 32953d533c091364e95d0d49705d92d7, type: 3}
+  - {fileID: 5649171510995904032, guid: a42b099af3b974549af765b80e511d58, type: 3}
 --- !u!1 &1207804625
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,6 +4040,7 @@ GameObject:
   - component: {fileID: 1541743156}
   - component: {fileID: 1541743155}
   - component: {fileID: 1541743154}
+  - component: {fileID: 1541743157}
   m_Layer: 5
   m_Name: Tutorial BG
   m_TagString: Untagged
@@ -4116,6 +4118,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541743152}
   m_CullTransparentMesh: 1
+--- !u!114 &1541743157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541743152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c17e97c576f4f49bf6f9aa6b75dcfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576734924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4853,6 +4867,7 @@ GameObject:
   - component: {fileID: 1894228059}
   - component: {fileID: 1894228058}
   - component: {fileID: 1894228061}
+  - component: {fileID: 1894228062}
   m_Layer: 5
   m_Name: Tutorial Button
   m_TagString: Untagged
@@ -4936,6 +4951,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1894228062}
+        m_TargetAssemblyTypeName: GameFreeze, Assembly-CSharp
+        m_MethodName: Freeze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1894228059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4984,6 +5011,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a896b1d24933c5d40976ce3c6a6fc53a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1894228062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894228056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c17e97c576f4f49bf6f9aa6b75dcfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1900781366
@@ -5215,6 +5254,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1541743152}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1541743157}
+        m_TargetAssemblyTypeName: GameFreeze, Assembly-CSharp
+        m_MethodName: Unfreeze
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

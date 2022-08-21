@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7630115035426749819}
   - component: {fileID: 7630115035426749820}
   - component: {fileID: 7630115035426749818}
+  - component: {fileID: -6681686971297753075}
   - component: {fileID: 8391940326813544233}
-  - component: {fileID: 8687236513001934527}
   m_Layer: 0
-  m_Name: Hedgehog_Preview
+  m_Name: KenneyJam_Preview
   m_TagString: TowerPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7630115035426749821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: e42c6bc8fa7e9694f881c296401df553, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 772545e9c9e51bc428c53f40135d20a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,6 +106,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6681686971297753075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630115035426749821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8c225ae86af6414da2af6aa22004d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  buildEnableColor: {r: 0.20392157, g: 1, b: 0, a: 0.7058824}
+  buildDisableColor: {r: 1, g: 0, b: 0, a: 0.7058824}
+  objectToSpawn: {fileID: 0}
+  cardPrefab: {fileID: 5649171510995904032, guid: a42b099af3b974549af765b80e511d58, type: 3}
+  weight: 0
+  gravity: 0
+  price: 0
+  phyMat: {fileID: 0}
+  cardID: 0
 --- !u!60 &8391940326813544233
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +145,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.72, y: 0.4}
+    oldSize: {x: 5.3, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -131,33 +153,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.18377759, y: 0.1983611}
-      - {x: -0.28247178, y: 0.09705535}
-      - {x: -0.2829716, y: -0.11408377}
-      - {x: -0.3608917, y: -0.11686511}
-      - {x: -0.35999998, y: -0.19999999}
-      - {x: 0.35999998, y: -0.19999999}
-      - {x: 0.36327788, y: 0.10033318}
-      - {x: 0.26361087, y: 0.19999999}
---- !u!114 &8687236513001934527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7630115035426749821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c225ae86af6414da2af6aa22004d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 10
-  buildEnableColor: {r: 0.20392157, g: 1, b: 0, a: 0.7058824}
-  buildDisableColor: {r: 1, g: 0, b: 0, a: 0.7058824}
-  objectToSpawn: {fileID: 0}
-  cardPrefab: {fileID: 5649171510995904032, guid: 3a895b0d42245c040a67ca53d1df86eb, type: 3}
-  weight: 0
-  gravity: 0
-  price: 0
-  phyMat: {fileID: 0}
-  cardID: 0
+    - - {x: 0.35, y: 0.13}
+      - {x: 0.17, y: 0.39999998}
+      - {x: -0.07, y: 0.39999998}
+      - {x: -0.14, y: 0.35999998}
+      - {x: -0.14999999, y: 0.26}
+      - {x: -0.26999998, y: 0.25}
+      - {x: -0.35, y: 0.13}
+      - {x: -0.35, y: -0.17999999}
+      - {x: -0.21, y: -0.37}
+      - {x: 0.17999999, y: -0.37}
+      - {x: 0.29999998, y: -0.26999998}
+      - {x: 0.35, y: -0.13}

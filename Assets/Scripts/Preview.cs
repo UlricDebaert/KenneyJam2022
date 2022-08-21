@@ -13,6 +13,9 @@ public class Preview : MonoBehaviour
     public Color buildEnableColor;
     public Color buildDisableColor;
 
+    AudioSource audioSource;
+    public AudioClip spawnSound;
+
     SpriteRenderer sprite;
 
     Vector3 mousePos;
@@ -31,6 +34,8 @@ public class Preview : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(spawnSound);
         canBuild = false;
     }
 

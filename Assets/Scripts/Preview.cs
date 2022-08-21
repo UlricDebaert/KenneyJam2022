@@ -79,7 +79,7 @@ public class Preview : MonoBehaviour
         transform.Rotate(0, 0, horizontalInput * rotationSpeed * Time.deltaTime * -10);
 
         if (canBuild) sprite.color = buildEnableColor;
-        if (!canBuild || obstacle || price >= ManaGer.instance.manaCounter || transform.position.y < LavaLine.instance.gameObject.transform.position.y) sprite.color = buildDisableColor;
+        if (!canBuild || obstacle || price > ManaGer.instance.manaCounter || transform.position.y < LavaLine.instance.gameObject.transform.position.y) sprite.color = buildDisableColor;
     }
 
     void Build()

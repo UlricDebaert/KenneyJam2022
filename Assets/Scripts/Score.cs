@@ -14,12 +14,14 @@ public class Score : MonoBehaviour
     private void Start()
     {
         score = 0;
+        highscore = 0;
     }
 
     private void Update()
     {
         if (TowerManager.instance.towerPiecesList.Count != 0)
-            score = Mathf.RoundToInt(TowerManager.instance.towerPiecesList[0].transform.position.y);
+            if(TowerManager.instance.towerPiecesList[0].transform.position.y > LavaLine.instance.transform.position.y)
+                score = Mathf.RoundToInt(TowerManager.instance.towerPiecesList[0].transform.position.y);
 
         UpdateUI();
     }

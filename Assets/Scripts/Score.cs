@@ -8,8 +8,8 @@ public class Score : MonoBehaviour
     public TMP_Text scoreUI;
     public TMP_Text highScoreUI;
 
-    float score;
-    float highscore;
+    public float score;
+    public float highscore;
 
     private void Start()
     {

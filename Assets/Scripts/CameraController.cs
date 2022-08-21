@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     public float movingSpeed = 0.02f;
 
     Vector3 wantedPosition;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class CameraController : MonoBehaviour
 
             //wantedPosition = target.TransformPoint(localPositionToMove);
             wantedPosition = new Vector3(transform.position.x, target.position.y, transform.position.z);
-            wantedPosition.y = target.position.y + localPositionToMove.y;
+            wantedPosition.y = target.position.y + localPositionToMove.y + offset.y;
         }
 
         transform.position = Vector3.Lerp(transform.position, wantedPosition, movingSpeed);
